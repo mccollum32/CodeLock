@@ -1,0 +1,15 @@
+G:\Programming\C_Sharp\codeLock\codeLock\bin\Release\loginList.mdf
+G:\Programming\C_Sharp\codeLock\codeLock\bin\Release\loginList_log.ldf
+G:\Programming\C_Sharp\codeLock\codeLock\bin\Release\codeLock.exe.config
+G:\Programming\C_Sharp\codeLock\codeLock\bin\Release\codeLock.exe
+G:\Programming\C_Sharp\codeLock\codeLock\bin\Release\codeLock.pdb
+G:\Programming\C_Sharp\codeLock\codeLock\obj\Release\codeLock.csproj.AssemblyReference.cache
+G:\Programming\C_Sharp\codeLock\codeLock\obj\Release\codeLock.mainPG.resources
+G:\Programming\C_Sharp\codeLock\codeLock\obj\Release\codeLock.loginPG.resources
+G:\Programming\C_Sharp\codeLock\codeLock\obj\Release\codeLock.splashPG.resources
+G:\Programming\C_Sharp\codeLock\codeLock\obj\Release\codeLock.newusrPG.resources
+G:\Programming\C_Sharp\codeLock\codeLock\obj\Release\codeLock.Properties.Resources.resources
+G:\Programming\C_Sharp\codeLock\codeLock\obj\Release\codeLock.csproj.GenerateResource.cache
+G:\Programming\C_Sharp\codeLock\codeLock\obj\Release\codeLock.csproj.CoreCompileInputs.cache
+G:\Programming\C_Sharp\codeLock\codeLock\obj\Release\codeLock.exe
+G:\Programming\C_Sharp\codeLock\codeLock\obj\Release\codeLock.pdb
