@@ -42,6 +42,10 @@ namespace codeLock
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -74,13 +78,13 @@ namespace codeLock
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(161, 36);
             this.saveAsToolStripMenuItem.Text = "Save ";
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(161, 36);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
@@ -97,13 +101,13 @@ namespace codeLock
             // setLengthToolStripMenuItem
             // 
             this.setLengthToolStripMenuItem.Name = "setLengthToolStripMenuItem";
-            this.setLengthToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.setLengthToolStripMenuItem.Size = new System.Drawing.Size(219, 36);
             this.setLengthToolStripMenuItem.Text = "Set Length";
             // 
             // randomizerToolStripMenuItem
             // 
             this.randomizerToolStripMenuItem.Name = "randomizerToolStripMenuItem";
-            this.randomizerToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.randomizerToolStripMenuItem.Size = new System.Drawing.Size(219, 36);
             this.randomizerToolStripMenuItem.Text = "Randomizer";
             this.randomizerToolStripMenuItem.Click += new System.EventHandler(this.randomizerToolStripMenuItem_Click);
             // 
@@ -121,15 +125,15 @@ namespace codeLock
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(284, 498);
+            this.listBox1.Location = new System.Drawing.Point(12, 472);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(270, 184);
+            this.listBox1.Size = new System.Drawing.Size(266, 124);
             this.listBox1.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(280, 475);
+            this.label1.Location = new System.Drawing.Point(8, 449);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 20);
             this.label1.TabIndex = 3;
@@ -138,7 +142,7 @@ namespace codeLock
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 475);
+            this.label2.Location = new System.Drawing.Point(14, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 20);
             this.label2.TabIndex = 4;
@@ -148,10 +152,47 @@ namespace codeLock
             // 
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 20;
-            this.listBox2.Location = new System.Drawing.Point(12, 498);
+            this.listBox2.Location = new System.Drawing.Point(18, 133);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(266, 184);
             this.listBox2.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(18, 355);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(127, 44);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Open";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(18, 323);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(266, 26);
+            this.textBox1.TabIndex = 7;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(151, 355);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 44);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Close";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(318, 110);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScriptErrorsSuppressed = true;
+            this.webBrowser1.Size = new System.Drawing.Size(598, 512);
+            this.webBrowser1.TabIndex = 9;
+            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // mainPG
             // 
@@ -159,6 +200,10 @@ namespace codeLock
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(928, 694);
+            this.Controls.Add(this.webBrowser1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -193,6 +238,10 @@ namespace codeLock
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
 

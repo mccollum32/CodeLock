@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Reflection;
 
 //Main app code page
 
@@ -63,5 +64,57 @@ namespace codeLock
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
+        private void LoadWeb(string url)
+        {
+            SuppressScriptErrors(webBrowser1, true); // Suppress script errors
+            webBrowser1.Navigate(url);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string url = textBox1.Text.Trim();
+            if (!string.IsNullOrEmpty(url))
+            {
+                LoadWeb(url);
+                listBox2.Items.Add(url);
+                textBox1.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid URL.") ;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate("www.google.com");
+        }
+
+        private void SuppressScriptErrors(WebBrowser browser, bool hide)
+        {
+            FieldInfo field = typeof(WebBrowser).GetField("_axIWebBrowser2", BindingFlags.Instance | BindingFlags.NonPublic);
+            if (field != null)
+            {
+                object axIWebBrowser2 = field.GetValue(browser);
+                if (axIWebBrowser2 != null)
+                {
+                    axIWebBrowser2.GetType().InvokeMember("Silent", BindingFlags.SetProperty, null, axIWebBrowser2, new object[] { hide });
+                }
+            }
+        }
+
+
+        private void AdjustWebPageSize()
+        {
+            if (webBrowser1.Document != null)
+            {
+                webBrowser1.Document.Body.Style = "zoom: " + (webBrowser1.Width / (double)webBrowser1.Document.Body.ScrollRectangle.Width);
+            }
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            AdjustWebPageSize();
+        }
     }
 }
